@@ -1,0 +1,41 @@
+﻿@model U2_Prueba1.Models.Nota
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Ver Nota</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nota1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nota1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ponderacion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ponderacion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Asignaturas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Asignaturas.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Estudiantes)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Estudiantes.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-secondary">Editar</a> |
+    <a asp-action="Index" class="btn btn-warning">Volver a la Lista</a>
+</div>
